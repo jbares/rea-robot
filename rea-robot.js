@@ -3,7 +3,7 @@ var robotPosX = 0;
 var robotPosY = 0;
 var robotDir = 'n';
 var dirList = ['NORTH', 'EAST', 'SOUTH', 'WEST'];
-var robotInt = false;
+var robotInt = false; //Flag to make sure place is the first command used
 
 //Simple logger
 function log(msg) {
@@ -97,6 +97,7 @@ function left() {
 	robotDir = dirList[index];
 }
 
+//Move the robot 1 unit forward in the direction its facing
 function move() {
 	if (!robotInt) 
 		return;
